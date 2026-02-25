@@ -1,0 +1,230 @@
+{
+  "kind": "build_request",
+  "title": "Pomodoro Timer App with Cute Aesthetic, Tasks, Streaks & Rewards",
+  "projectName": "Pomo Bloom",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Build a Pomodoro timer with a cute, printy/stationery-inspired visual theme featuring pastel colors, rounded cards, playful typography, doodle-style decorative accents, and soft shadows. The layout should feel like a paper planner or cute desk organizer. Apply this aesthetic consistently across all screens.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "cute printesty layouts",
+          "cute gift options"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pastel color palette (pinks, mints, lavenders, creams) is used throughout",
+        "Typography uses a friendly, rounded or handwriting-style font",
+        "UI components (cards, buttons, inputs) have soft rounded corners and subtle drop shadows",
+        "Decorative doodle/floral/star accents appear on cards and section headers",
+        "Theme feels cohesive and stationery/planner-inspired across all pages"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a Pomodoro timer with a customizable focus time limit. The user can set the duration in minutes before starting. Display the countdown prominently with a cute circular progress ring. Play a sound when the timer completes.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "pomodoro timer",
+          "time-limit"
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can set focus duration (default 25 min) via an input or stepper control",
+        "Circular countdown ring visually tracks remaining time",
+        "Timer counts down accurately and stops at zero",
+        "A completion sound plays when the focus session ends",
+        "Start, pause, and reset controls are clearly accessible"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a break timer that activates after each Pomodoro session ends. Users can configure short break duration (default 5 min) and long break duration (default 15 min, triggered every 4 Pomodoros). The timer should automatically transition to break mode and display it visually distinct from focus mode.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add break timer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Short break timer activates automatically after a Pomodoro session",
+        "Long break triggers after every 4th completed Pomodoro",
+        "Break durations are configurable by the user",
+        "Break mode has a visually distinct color or design compared to focus mode",
+        "User can skip a break and start the next Pomodoro manually"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add an editable 'What are you working on?' text field displayed prominently on the timer screen. The user can type their current task for that Pomodoro session. The text should be saved alongside the session record and displayed in the progress dashboard.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "what are you working on should be able written by the user for that particular task so it should be editable"
+        ]
+      },
+      "acceptanceCriteria": [
+        "An editable text input labeled 'What are you working on?' is visible on the main timer screen",
+        "User can type and edit the task name freely before or during a session",
+        "The task name is associated with the completed Pomodoro session in storage",
+        "Task name appears in the progress dashboard per session",
+        "The field is cleared or pre-filled when starting a new session"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement sound customization options. Users can choose from a set of timer completion sounds (e.g., bell, chime, soft ding, nature sound) and adjust the volume. The selected sound preference should be persisted.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "sound customization options"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 4 distinct completion sounds are available to choose from",
+        "User can preview each sound before selecting",
+        "A volume slider is provided",
+        "Selected sound and volume are persisted in backend state",
+        "The chosen sound plays at Pomodoro and break completion"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build a progress statistics dashboard that displays historical session data including: total Pomodoros completed, total focus time, daily/weekly session counts, current streak, and a list of completed sessions with their associated task names and dates.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "progress statics dashboard"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard shows total Pomodoros completed and total focus time",
+        "A daily and weekly session count chart or summary is displayed",
+        "Current streak count is prominently shown",
+        "A scrollable session history list shows task name, date, and duration per session",
+        "Dashboard is accessible from a navigation tab or button"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a streak gamification system. Track consecutive days where the user completes at least one Pomodoro. Display the current streak count with a cute flame or star badge. Award milestone badges (e.g., 3-day, 7-day, 30-day streaks) and show them in a badge collection section.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "gamify with streaks"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Streak counter increments for each consecutive day with at least one completed Pomodoro",
+        "Streak resets if a day is missed",
+        "Current streak is displayed on the main timer screen and dashboard",
+        "Milestone badges are awarded at 3, 7, 14, and 30-day streaks",
+        "Badge collection section shows all earned and locked badges"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Show a cute gift/reward animation when a Pomodoro task session is completed. The animation should display a gift box opening with sparkles, confetti, and an encouraging message. Users can click the gift to reveal a small motivational reward message.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "cute gift options at the completion of the task"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A gift box animation plays on the screen upon task completion",
+        "Animation includes sparkles or confetti effects",
+        "Clicking the gift reveals a random motivational message",
+        "Animation can be dismissed to proceed",
+        "At least 10 different motivational messages are included"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement a custom themes system allowing users to switch between at least 5 pre-designed themes (e.g., Cherry Blossom, Mint Garden, Lavender Dream, Sunny Citrus, Midnight Stars). Each theme changes the color palette and decorative accent style. The selected theme persists across sessions.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "add custom themes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 5 distinct themes are available with unique color palettes",
+        "Switching themes updates the entire UI immediately",
+        "Theme selection is accessible from a settings or theme picker panel",
+        "Selected theme is persisted in user settings on the backend",
+        "Each theme has a cute preview swatch in the theme picker"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Generate app visual assets: a cute gift box illustration for the task completion reward animation, and a decorative app logo/icon featuring a tomato with floral elements.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "cute gift options",
+          "cute printesty layouts"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gift box illustration is rendered in the completion animation",
+        "App logo/icon is displayed in the header or app title area",
+        "Assets match the overall pastel/cute aesthetic"
+      ]
+    }
+  ],
+  "constraints": [
+    "All Motoko logic must remain in a single actor in backend/main.mo",
+    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui",
+    "No external APIs or third-party services for sounds — use browser Web Audio API or bundled audio assets",
+    "No real-time/WebSocket features; use polling or React Query for data freshness"
+  ],
+  "nonGoals": [
+    "Multi-user or collaborative Pomodoro sessions",
+    "Calendar integration or external task manager sync",
+    "Mobile app (React Native) version",
+    "Email or push notifications",
+    "Social sharing features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cute pastel gift box illustration with ribbon, sparkles and confetti bursting out, flat vector style with soft shadows (gift-box-reward.dim_400x400.png)",
+      "App logo featuring a round tomato with small cherry blossom flowers and a leaf, pastel pink and red tones, flat cute illustration style (pomo-bloom-logo.dim_256x256.png)",
+      "Decorative doodle pattern tile with tiny stars, hearts, dots and flower doodles in pastel colors on a cream background, seamless pattern (doodle-pattern-tile.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}

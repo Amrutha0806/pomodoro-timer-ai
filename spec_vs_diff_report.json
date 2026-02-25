@@ -1,0 +1,93 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T14:23:56.725Z",
+  "summary": "The diff implements most requirements well, including the timer, break management, sound customization, dashboard, streak/badges, reward animation, themes, and visual assets. A few specific acceptance criteria have gaps or are unverifiable from the truncated diff.",
+  "missing_requirements": [
+    {
+      "requirement": "The completion sound should also play at break completion (not just Pomodoro completion)",
+      "reason": "In Timer.tsx, playSound is called only in handleFocusComplete (focus session end). There is no evidence of sound being played when a break timer completes. The break completion path in useTimer.ts transitions back to focus mode without triggering a sound callback.",
+      "evidence": [
+        "frontend/src/components/Timer.tsx",
+        "frontend/src/hooks/useTimer.ts"
+      ]
+    },
+    {
+      "requirement": "REQ-4: The 'What are you working on?' field should be cleared or pre-filled when starting a new session",
+      "reason": "The task name is cleared on reward dismissal only (handleDismissReward sets taskName to ''). There is no pre-filling logic or clearing tied to the start of a new session independent of dismissal flow.",
+      "evidence": [
+        "frontend/src/components/Timer.tsx"
+      ]
+    },
+    {
+      "requirement": "REQ-6: A daily and weekly session count chart or summary — weekly chart is present but no separate daily count summary is visible",
+      "reason": "Dashboard.tsx shows a 'Last 7 Days' bar chart, but there is no explicit daily count stat card or separate weekly total summary beyond the chart. The AC requires both daily and weekly session count chart or summary.",
+      "evidence": [
+        "frontend/src/components/Dashboard.tsx"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Gift box illustration (gift-box-reward.dim_400x400.png) should be rendered in the completion animation",
+      "reason": "RewardAnimation.tsx is truncated and does not confirm the image asset is referenced or rendered. The file gift-box-reward.dim_400x400.png is listed as required but its presence and usage cannot be confirmed from the diff.",
+      "evidence": [
+        "frontend/src/components/RewardAnimation.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Profile setup dialog collects a user name field that is not stored in the backend UserProfile type",
+      "reason": "ProfileSetup.tsx has a name input, but the UserProfile type in main.mo has no name field and App.tsx comments 'Name not stored in UserProfile type'. The name collection UI is non-functional relative to backend storage and was not requested.",
+      "evidence": [
+        "frontend/src/components/ProfileSetup.tsx",
+        "frontend/src/App.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Access control and admin authorization system in the backend using MixinAuthorization and AccessControl",
+      "reason": "The build request does not mention any access control, admin roles, or multi-user authorization. The backend implements a full authorization mixin with admin and user permission checks that was not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/BadgeCollection.tsx",
+    "frontend/src/components/BreakSettings.tsx",
+    "frontend/src/components/Dashboard.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/ProfileSetup.tsx",
+    "frontend/src/components/RewardAnimation.tsx",
+    "frontend/src/components/SoundSettings.tsx",
+    "frontend/src/components/StreakBadge.tsx",
+    "frontend/src/components/ThemePicker.tsx",
+    "frontend/src/components/Timer.tsx",
+    "frontend/src/data/motivationalMessages.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useTimer.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/DashboardPage.tsx",
+    "frontend/src/pages/SettingsPage.tsx",
+    "frontend/src/pages/TimerPage.tsx",
+    "frontend/src/styles/themes.ts",
+    "frontend/src/utils/audio.ts",
+    "frontend/src/utils/dateHelpers.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

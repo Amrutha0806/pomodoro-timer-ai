@@ -1,0 +1,190 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-pomodoro-timer-with-a-cute-printy-stationery-inspired-visual-theme-featuring-pastel-colors-rounded-cards-playful-typography-doodle-style-decorative-accents-and-soft-shadows-the-layout-should-feel-like-a-paper-planner-or-cute-desk-organizer-apply-this-aesthetic-consistently-across-all-screens",
+      "featureTitle": "Build a Pomodoro timer with a cute, printy/stationery-inspired visual theme featuring pastel colors, rounded cards, playful typography, doodle-style decorative accents, and soft shadows. The layout should feel like a paper planner or cute desk organizer. Apply this aesthetic consistently across all screens.",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-pomodoro-timer-with-a-customizable-focus-time-limit-the-user-can-set-the-duration-in-minutes-before-starting-display-the-countdown-prominently-with-a-cute-circular-progress-ring-play-a-sound-when-the-timer-completes",
+      "featureTitle": "Implement a Pomodoro timer with a customizable focus time limit. The user can set the duration in minutes before starting. Display the countdown prominently with a cute circular progress ring. Play a sound when the timer completes.",
+      "files": [
+        "frontend/src/components/Timer.tsx",
+        "frontend/src/hooks/useTimer.ts",
+        "frontend/src/utils/audio.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-break-timer-that-activates-after-each-pomodoro-session-ends-users-can-configure-short-break-duration-default-5-min-and-long-break-duration-default-15-min-triggered-every-4-pomodoros-the-timer-should-automatically-transition-to-break-mode-and-display-it-visually-distinct-from-focus-mode",
+      "featureTitle": "Add a break timer that activates after each Pomodoro session ends. Users can configure short break duration (default 5 min) and long break duration (default 15 min, triggered every 4 Pomodoros). The timer should automatically transition to break mode and display it visually distinct from focus mode.",
+      "files": [
+        "frontend/src/components/BreakSettings.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-sound-customization-options-users-can-choose-from-a-set-of-timer-completion-sounds-e-g-bell-chime-soft-ding-nature-sound-and-adjust-the-volume-the-selected-sound-preference-should-be-persisted",
+      "featureTitle": "Implement sound customization options. Users can choose from a set of timer completion sounds (e.g., bell, chime, soft ding, nature sound) and adjust the volume. The selected sound preference should be persisted.",
+      "files": [
+        "frontend/src/components/SoundSettings.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-progress-statistics-dashboard-that-displays-historical-session-data-including-total-pomodoros-completed-total-focus-time-daily-weekly-session-counts-current-streak-and-a-list-of-completed-sessions-with-their-associated-task-names-and-dates",
+      "featureTitle": "Build a progress statistics dashboard that displays historical session data including: total Pomodoros completed, total focus time, daily/weekly session counts, current streak, and a list of completed sessions with their associated task names and dates.",
+      "files": [
+        "frontend/src/components/Dashboard.tsx",
+        "frontend/src/utils/dateHelpers.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-streak-gamification-system-track-consecutive-days-where-the-user-completes-at-least-one-pomodoro-display-the-current-streak-count-with-a-cute-flame-or-star-badge-award-milestone-badges-e-g-3-day-7-day-30-day-streaks-and-show-them-in-a-badge-collection-section",
+      "featureTitle": "Implement a streak gamification system. Track consecutive days where the user completes at least one Pomodoro. Display the current streak count with a cute flame or star badge. Award milestone badges (e.g., 3-day, 7-day, 30-day streaks) and show them in a badge collection section.",
+      "files": [
+        "frontend/src/components/BadgeCollection.tsx",
+        "frontend/src/components/StreakBadge.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-show-a-cute-gift-reward-animation-when-a-pomodoro-task-session-is-completed-the-animation-should-display-a-gift-box-opening-with-sparkles-confetti-and-an-encouraging-message-users-can-click-the-gift-to-reveal-a-small-motivational-reward-message",
+      "featureTitle": "Show a cute gift/reward animation when a Pomodoro task session is completed. The animation should display a gift box opening with sparkles, confetti, and an encouraging message. Users can click the gift to reveal a small motivational reward message.",
+      "files": [
+        "frontend/src/components/RewardAnimation.tsx",
+        "frontend/src/data/motivationalMessages.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-custom-themes-system-allowing-users-to-switch-between-at-least-5-pre-designed-themes-e-g-cherry-blossom-mint-garden-lavender-dream-sunny-citrus-midnight-stars-each-theme-changes-the-color-palette-and-decorative-accent-style-the-selected-theme-persists-across-sessions",
+      "featureTitle": "Implement a custom themes system allowing users to switch between at least 5 pre-designed themes (e.g., Cherry Blossom, Mint Garden, Lavender Dream, Sunny Citrus, Midnight Stars). Each theme changes the color palette and decorative accent style. The selected theme persists across sessions.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ThemePicker.tsx",
+        "frontend/src/styles/themes.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-app-visual-assets-a-cute-gift-box-illustration-for-the-task-completion-reward-animation-and-a-decorative-app-logo-icon-featuring-a-tomato-with-floral-elements",
+      "featureTitle": "Generate app visual assets: a cute gift box illustration for the task completion reward animation, and a decorative app logo/icon featuring a tomato with floral elements.",
+      "files": [
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/components/ProfileSetup.tsx",
+        "frontend/src/pages/DashboardPage.tsx",
+        "frontend/src/pages/SettingsPage.tsx",
+        "frontend/src/pages/TimerPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
